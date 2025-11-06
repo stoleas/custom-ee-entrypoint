@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 echo "# START TEST INPUT"
-#( grep -r "my_var" / )2>/dev/null
+find / -xdev -type f -print0 | xargs grep -0 -H "my_var"
 echo "# END TEST INPUT"
