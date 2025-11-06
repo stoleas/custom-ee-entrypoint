@@ -13,4 +13,4 @@ additional_build_steps:
     - COPY pre-check.sh /usr/bin/pre-check.sh
     - RUN chmod 755 /usr/bin/pre-check.sh
   append_final:
-    - RUN sed -i '/exec "$@"/i /usr/bin/pre-check.sh' /usr/bin/entrypoint
+    - RUN sed -i '/exec "$@"/i /usr/bin/pre-check.sh' /opt/builder/bin/entrypoint
