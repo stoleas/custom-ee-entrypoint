@@ -16,4 +16,4 @@ dependencies:
 #    - RUN sed -i '/exec "${@}"/i /usr/bin/pre-check.sh' /opt/builder/bin/entrypoint
 additional_build_files:
   - src: pre-check.sh
-    dest: /home/runner/.bashrc
+    dest: "/home/runner/.bashrc"
