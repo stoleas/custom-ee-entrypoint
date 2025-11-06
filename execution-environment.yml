@@ -8,12 +8,9 @@ dependencies:
     package_pip: ansible-core
   ansible_runner:
     package_pip: ansible-runner
-#additional_build_steps:
-#  prepend_base:
-#    - COPY pre-check.sh /usr/bin/pre-check.sh
-#    - RUN chmod 755 /usr/bin/pre-check.sh
-#  append_final:
-#    - RUN sed -i '/exec "${@}"/i /usr/bin/pre-check.sh' /opt/builder/bin/entrypoint
-additional_build_files:
-  - src: pre-check.sh
-    dest: "/home/runner/.bashrc"
+additional_build_steps:
+  prepend_base:
+    - COPY pre-check.sh /usr/bin/pre-check.sh
+    - RUN chmod 755 /usr/bin/pre-check.sh
+  append_final:
+    - RUN sed -i '/exec "${@}"/i /usr/bin/pre-check.sh' /opt/builder/bin/entrypoint

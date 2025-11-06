@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 echo "# START TEST INPUT"
-find / -xdev -type f | xargs grep -H "my_var"
+cat "@/runner/env/extravars"
 echo "# END TEST INPUT"
