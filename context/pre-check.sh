@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 echo "# START TEST INPUT"
-cat "@/runner/env/extravars"
+ls -l /runner/
 echo "# END TEST INPUT"
