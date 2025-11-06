@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
 echo "# START TEST INPUT"
-echo "### PRINTING \${ANSIBLE_EXTRA_VARS}"
-echo "${ANSIBLE_EXTRA_VARS}"
-echo "### RUNNING COMMAND env"
-env
+find / -name "job_extra_vars.json" 2>/dev/null
 echo "# END TEST INPUT"
