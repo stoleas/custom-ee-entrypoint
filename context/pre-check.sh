@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo "# START TEST INPUT"
-cat /runner/env/extravars
+
 echo "# END TEST INPUT"
 
-exit 1
+exit 0

@@ -10,6 +10,7 @@ dependencies:
     package_pip: ansible-runner
 additional_build_steps:
   prepend_base:
+    - COPY pre-check.yml /usr/bin/pre-check.yml
     - COPY pre-check.sh /usr/bin/pre-check.sh
     - RUN chmod 755 /usr/bin/pre-check.sh
   append_final:
