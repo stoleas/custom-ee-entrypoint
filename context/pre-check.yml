@@ -2,8 +2,6 @@
 - hosts: localhost
   connection: local
   gather_facts: false
-  vars_files:
-    - /runner/env/extravars
   tasks:
     - name: Get and display current UTC time
       ansible.builtin.set_fact:
@@ -11,4 +9,7 @@
 
     - ansible.builtin.debug:
         var: cur_time
+
+    - ansible.builtin.debug:
+        var: my_var
 
