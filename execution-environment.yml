@@ -10,8 +10,9 @@ dependencies:
     package_pip: ansible-runner
 additional_build_steps:
   prepend_base:
-    - COPY pre-check.yml /usr/bin/pre-check.yml
-    - COPY pre-check.sh /usr/bin/pre-check.sh
-    - RUN chmod 755 /usr/bin/pre-check.sh
+    - RUN mkdir -p /runner/validation
+    - COPY pre-check.yml /runner/validation/pre-check.yml
+    - COPY pre-check.sh /runner/validation/pre-check.sh
+    - RUN chmod 755 /runner/validation/pre-check.sh
   append_final:
-    - RUN sed -i '/exec "${@}"/i /usr/bin/pre-check.sh' /opt/builder/bin/entrypoint
+    - RUN sed -i '/exec "${@}"/i /runner/validation/pre-check.sh' /opt/builder/bin/entrypoint
