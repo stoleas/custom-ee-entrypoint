@@ -5,7 +5,7 @@ START_END_MSG=(
     "# VALIDATIONS COMPLETE"
 )
 VAL_DIR="/tmp/validation"
-VAL_PBP="/runner/validation/pre-check.yml"
+VAL_PBP="/usr/local/bin/validation/pre-check.yml"
 
 printf "${START_END_MSG[0]}\n"
 mkdir  "${VAL_DIR}"
