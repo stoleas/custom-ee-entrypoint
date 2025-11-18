@@ -13,6 +13,7 @@ additional_build_steps:
     - RUN mkdir -p       /usr/local/bin/validation
     - COPY pre-check.yml /usr/local/bin/validation/pre-check.yml
     - COPY pre-check.sh  /usr/local/bin/validation/pre-check.sh
+    - COPY inventory     /usr/local/bin/validation/inventory
     - RUN chmod 755      /usr/local/bin/validation/pre-check.sh
   append_final:
-    - RUN sed -i '/exec "${@}"/i /usr/local/bin/validation/pre-check.sh' /opt/builder/bin/entrypoint
+    - RUN sed -i '/exec "${@}"/i /usr/local/bin/validation/pre-check.sh "${@}"' /opt/builder/bin/entrypoint
