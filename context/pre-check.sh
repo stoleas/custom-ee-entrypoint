@@ -14,6 +14,3 @@ ansible-playbook    \
     -i "${VAL_INV}" \
     -e "${VAL_VAR}" \
        "${VAL_PBP}"
-printf "${START_END_MSG[1]}\n"
-
-exit 0

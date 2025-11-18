@@ -11,5 +11,5 @@
         var: cur_time
 
     - ansible.builtin.debug:
-        var: my_var
+        var: my_varf
 
