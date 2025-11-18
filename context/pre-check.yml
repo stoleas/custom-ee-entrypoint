@@ -12,9 +12,9 @@
 
     - ansible.builtin.assert:
         that:
-          - my_varf is defined
-        fail_msg: "FATAL: The variable 'my_varf' is not defined"
-        success_msg: "SUCCESS: required 'my_varf' is defined"
+          - my_var is defined
+        fail_msg: "FATAL: The variable 'my_var' is not defined"
+        success_msg: "SUCCESS: required 'my_var' is defined"
 
 
 
