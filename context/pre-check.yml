@@ -10,6 +10,11 @@
     - ansible.builtin.debug:
         var: cur_time
 
-    - ansible.builtin.debug:
-        var: my_varf
+    - ansible.builtin.assert:
+        that:
+          - my_varf is defined
+        fail_msg: "FATAL: The variable 'my_varf' is not defined"
+        success_msg: "SUCCESS: required 'my_varf' is defined"
+
+
 
