@@ -16,7 +16,7 @@ VAL_VAR="@/runner/env/extravars"
 dumb-init ansible-runner run \
     --inventory="${VAL_INV}" \
     --playbook="${VAL_PBP}" \
-               "${VAL_PTH}" 
+               /tmp/private
 
 sleep 120
 #echo "{\"result\": \"success\", \"message\": \"${MESSAGE}\"}"
