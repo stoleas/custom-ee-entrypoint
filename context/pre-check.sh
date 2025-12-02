@@ -13,12 +13,10 @@ VAL_VAR="@/runner/env/extravars"
 #MESSAGE="${@}"
 
 
-ansible-runner run \
-    --inventory="${VAL_INV}" \
-    --playbook="${VAL_PBP}" \
-               /tmp/private
+#ansible-runner worker --private-data-dir=/usr/local/bin/validation
 
-#sleep 120
+sleep 120
+
 #echo "{\"result\": \"success\", \"message\": \"${MESSAGE}\"}"
 #
 #dumb-init \
