@@ -15,7 +15,7 @@ VAL_VAR="@/runner/env/extravars"
 
 #ansible-runner worker --private-data-dir=/usr/local/bin/validation
 
-sleep 120
+sleep 240
 
 #echo "{\"result\": \"success\", \"message\": \"${MESSAGE}\"}"
 #
