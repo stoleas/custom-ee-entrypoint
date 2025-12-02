@@ -16,7 +16,8 @@ additional_build_steps:
     - COPY inventory     /usr/local/bin/validation/inventory
     - RUN chmod 755      /usr/local/bin/validation/pre-check.sh
   append_final:
-    - RUN sed -i '/exec "${@}"/i set -x' /opt/builder/bin/entrypoint
+    - RUN sed -i 's,exec "${@}",dumb-init ansible-runner worker --private-data-dir=/runner,g' /opt/builder/bin/entrypoint
+#    - RUN sed -i '/exec "${@}"/i set -x' /opt/builder/bin/entrypoint
 #    - RUN sed -i '/exec "${@}"/i /usr/local/bin/validation/pre-check.sh "${@}"' /opt/builder/bin/entrypoint
 #    - RUN sed -i 's/exec "${@}"/exec "${@}"/g' /opt/builder/bin/entrypoint
 
