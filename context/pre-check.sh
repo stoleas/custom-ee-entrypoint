@@ -11,11 +11,16 @@ VAL_VAR="@/runner/env/extravars"
 
 #printf "${START_END_MSG[0]}\n"
 MESSAGE="${@}"
-echo "{\"result\": \"success\", \"message\": \"${MESSAGE}\"}"
-#dumb-init \
-#    ansible-playbook    \
-#        -i "${VAL_INV}" \
-#        -e "${VAL_VAR}" \
-#           "${VAL_PBP}"
 
-sleep 120
+dumb-init ansible-runner worker --private-data-dir=/runner
+
+echo "{\"result\": \"success\", \"message\": \"${MESSAGE}\"}"
+dumb-init \
+    ansible-playbook    \
+        -i "${VAL_INV}" \
+        -e "${VAL_VAR}" \
+           "${VAL_PBP}"
+
+#sleep 120
+
+#{"result": "success", "message": "dumb-init ansible-runner worker --private-data-dir=/runner"}
