@@ -14,14 +14,14 @@ MESSAGE="${@}"
 
 #sleep 120
 
-dumb-init ansible-runner run --private-data-dir="${VAL_PTH}" 
+#dumb-init ansible-runner run --private-data-dir="${VAL_PTH}" 
 
 #echo "{\"result\": \"success\", \"message\": \"${MESSAGE}\"}"
-dumb-init \
-    ansible-playbook    \
-        -i "${VAL_INV}" \
-        -e "${VAL_VAR}" \
-           "${VAL_PBP}"
+#dumb-init \
+#    ansible-playbook    \
+#        -i "${VAL_INV}" \
+#        -e "${VAL_VAR}" \
+#           "${VAL_PBP}"
 
 
 
