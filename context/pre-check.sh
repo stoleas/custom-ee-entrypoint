@@ -21,6 +21,6 @@ dumb-init \
         -e "${VAL_VAR}" \
            "${VAL_PBP}"
 
-#sleep 120
+sleep 120
 
 #{"result": "success", "message": "dumb-init ansible-runner worker --private-data-dir=/runner"}
