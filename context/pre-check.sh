@@ -15,7 +15,7 @@ MESSAGE="${@}"
 #sleep 120
 #
 dumb-init ansible-runner run \
-    --private-data-dir="${VAL_PTH}" \
+    --private_data_dir="${VAL_PTH}" \
     --inventory="${VAL_INV}" \
     --playbook="${VAL_PBP}"
 #
