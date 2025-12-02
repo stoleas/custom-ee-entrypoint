@@ -13,7 +13,7 @@ VAL_VAR="@/runner/env/extravars"
 #MESSAGE="${@}"
 
 
-dumb-init ansible-runner run \
+ansible-runner run \
     --inventory="${VAL_INV}" \
     --playbook="${VAL_PBP}" \
                /tmp/private
