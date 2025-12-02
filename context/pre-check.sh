@@ -18,7 +18,7 @@ dumb-init ansible-runner run \
     --playbook="${VAL_PBP}" \
                /tmp/private
 
-sleep 120
+#sleep 120
 #echo "{\"result\": \"success\", \"message\": \"${MESSAGE}\"}"
 #
 #dumb-init \
